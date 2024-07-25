@@ -18,11 +18,22 @@ class DemoComponent extends React.Component {
         home: 'Can Giuoc'
     }
 
+    handleOnChangeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
     render() {
         // let name = 'DANH NGUYEN';
         return (
             <>
-                <div className="myname"> My Name is {this.state.name} </div>
+                <div className="myname">
+                    <input value={this.state.name} type="text"
+                        onChange={(event) => this.handleOnChangeName(event)}
+                    />
+                    My Name is {this.state.name}
+                </div>
                 <div className="test"> Live in {this.state['home']}</div >
             </>
         )
