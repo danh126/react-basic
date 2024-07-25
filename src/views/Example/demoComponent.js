@@ -14,14 +14,21 @@ class DemoComponent extends React.Component {
 
     //state là 1 object
     state = {
-        name: 'DANH NGUYEN',
+        name: '',
         home: 'Can Giuoc'
     }
 
     handleOnChangeName = (event) => {
+        /*Hàm setState dùng để set lại giá trị cần set 
+        (còn những giá trị khác trong state sẽ tự động merga)
+        */
         this.setState({
             name: event.target.value
         })
+    }
+
+    handleOnClick = () => {
+        alert('click me');
     }
 
     render() {
@@ -35,6 +42,9 @@ class DemoComponent extends React.Component {
                     My Name is {this.state.name}
                 </div>
                 <div className="test"> Live in {this.state['home']}</div >
+                <div className="click">
+                    <button onClick={() => this.handleOnClick()}>Click me</button>
+                </div>
             </>
         )
     }
