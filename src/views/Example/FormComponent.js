@@ -1,6 +1,7 @@
 import React from "react";
 
 import ChildComponent from "./ChildComponent";
+import FunctionCompnent from "./FunctionComponent";
 
 class FormComponent extends React.Component {
     state = {
@@ -40,7 +41,7 @@ class FormComponent extends React.Component {
                     <input type="text" onChange={(event) => this.handleLastName(event)} value={this.state.lastName} /><br />
                     <input type="submit" onClick={(event) => this.handleSubmit(event)} />
                 </form>
-                <ChildComponent
+                <FunctionCompnent
                     name={this.state.firstName}
                     age={20}
                     arrJobs={this.state.arrJobs}
