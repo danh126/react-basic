@@ -38,10 +38,10 @@ class FormComponent extends React.Component {
                     <label>First Name</label><br />
                     <input type="text" onChange={(event) => this.handleFirstName(event)} value={this.state.firstName} /><br />
                     <label>Last Name</label><br />
-                    <input type="text" onChange={(event) => this.handleLastName(event)} value={this.state.lastName} /><br />
+                    <input type="text" onChange={(event) => this.handleLastName(event)} value={this.state.lastName} /><br /><br />
                     <input type="submit" onClick={(event) => this.handleSubmit(event)} />
                 </form>
-                <FunctionCompnent
+                <ChildComponent
                     name={this.state.firstName}
                     age={20}
                     arrJobs={this.state.arrJobs}
