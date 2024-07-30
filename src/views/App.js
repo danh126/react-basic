@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.scss';
-import DemoComponent from './Example/demoComponent';
-import FormComponent from './Example/FormComponent';
+import './Todos/ListTodo.scss';
+
+// import FormComponent from './Example/FormComponent';
+import ListTodo from './Todos/ListTodo';
 
 /**
  * có 2 kiểu components: class component / function component (function, arrow)
@@ -16,9 +18,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World With Reactjs (NTD)</p>
-        <FormComponent />
+        <p>Simple ToDo App With Reactjs (NTD)</p>
+        {/* <FormComponent /> */}
+        <ListTodo />
       </header>
+
     </div>
   );
 }
