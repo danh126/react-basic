@@ -29,6 +29,16 @@ class FormComponent extends React.Component {
         })
     }
 
+    //Hàm này là nơi thích hợp dùng để gọi api
+    componentDidMount() {
+        console.log('>>> component did mount');
+    }
+
+    //Hàm được dùng khi thao tác giữa con và cha (dùng để cập nhật dữ liệu)
+    componentDidUpdate(prevProps, prvevState) {
+        console.log('>>> rung didUpdate ', 'prev status: ', prvevState, 'current state: ', this.state);
+    }
+
     render() {
         return (
             <>
