@@ -25,6 +25,7 @@ class AddComponent extends React.Component {
         //Validate form submit
         if (!this.state.titleJobs || !this.state.salary) {
             alert('Missing required');
+            return;
         }
 
         //Truyền dữ liệu lên function lớp cha (theo dạng object)
