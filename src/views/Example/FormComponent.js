@@ -12,10 +12,20 @@ class FormComponent extends React.Component {
         ]
     }
 
+    // arrow function nhận dữ liệu từ lớp con truyền vào
+    addNewJobs = (job) => {
+        console.log('>>> check data job child: ', job);
+        this.setState({
+            arrJobs: [...this.state.arrJobs, job]
+        })
+    }
+
     render() {
         return (
             <>
-                <AddComponent />
+                <AddComponent
+                    addNewJobs={this.addNewJobs}
+                />
 
                 <ChildComponent
                     name={this.state.firstName}

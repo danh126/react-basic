@@ -21,12 +21,30 @@ class AddComponent extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault() //ngăn sự kiện load lại trang khi submit
         console.log('>>> check data input:', this.state)
+
+        //Validate form submit
+        if (!this.state.titleJobs || !this.state.salary) {
+            alert('Missing required');
+        }
+
+        //Truyền dữ liệu lên function lớp cha (theo dạng object)
+        this.props.addNewJobs({
+            id: Math.floor(Math.random() * 100), //tạo id tự động
+            title: this.state.titleJobs,
+            salary: this.state.salary
+        });
+
+        //Saau khi truyền dữ liệu xong set input null
+        this.setState({
+            titleJobs: '',
+            salary: ''
+        });
     }
 
     render() {
         return (
             <form>
-                <label>Job's Name</label><br />
+                <label>Job's Title</label><br />
                 <input type="text" onChange={(event) => this.handleTitleJobs(event)} value={this.state.titleJobs} /><br />
                 <label>Salary</label><br />
                 <input type="text" onChange={(event) => this.handleSalary(event)} value={this.state.salary} /><br /><br />
