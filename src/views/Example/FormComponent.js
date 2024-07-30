@@ -6,9 +6,9 @@ import AddComponent from "./AddComponent";
 class FormComponent extends React.Component {
     state = {
         arrJobs: [
-            { id: 'job1', title: 'Developers', salary: '500 $' },
-            { id: 'job2', title: 'Testers', salary: '400 $' },
-            { id: 'job3', title: 'Project Managers', salary: '1500 $' }
+            { id: 'job1', title: 'Developers', salary: '500' },
+            { id: 'job2', title: 'Testers', salary: '400' },
+            { id: 'job3', title: 'Project Managers', salary: '1500' }
         ]
     }
 
@@ -20,6 +20,15 @@ class FormComponent extends React.Component {
         })
     }
 
+    // arrow function delete job
+    deleteJobs = (job) => {
+        let currenJob = this.state.arrJobs;
+        currenJob = currenJob.filter(item => item.id !== job.id);
+        this.setState({
+            arrJobs: currenJob
+        })
+    }
+
     render() {
         return (
             <>
@@ -28,9 +37,8 @@ class FormComponent extends React.Component {
                 />
 
                 <ChildComponent
-                    name={this.state.firstName}
-                    age={20}
                     arrJobs={this.state.arrJobs}
+                    deleteJobs={this.deleteJobs}
                 />
             </>
         )
