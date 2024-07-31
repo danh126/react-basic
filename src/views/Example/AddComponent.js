@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 class AddComponent extends React.Component {
     state = {
@@ -24,7 +25,7 @@ class AddComponent extends React.Component {
 
         //Validate form submit
         if (!this.state.titleJobs || !this.state.salary) {
-            alert('Missing required');
+            toast.error("Missing Title Job's!");
             return;
         }
 

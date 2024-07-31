@@ -1,5 +1,6 @@
 import React from "react";
 import AddTodo from "./AddTodo";
+import { ToastContainer, toast } from 'react-toastify';
 
 class ListTodo extends React.Component {
     state = {
@@ -15,6 +16,8 @@ class ListTodo extends React.Component {
         this.setState({
             listTodo: [...this.state.listTodo, todo]
         })
+
+        toast.success("Wow so easy!");
     }
 
     handleDeleteTodo = (todo) => {
@@ -24,6 +27,8 @@ class ListTodo extends React.Component {
         this.setState({
             listTodo: currentTodos
         })
+
+        toast.warning("Delete Todo Success!");
     }
 
     handleEditTodo = (todo) => {
@@ -43,6 +48,8 @@ class ListTodo extends React.Component {
                 listTodo: listTodoCopy,
                 editTodo: {}
             })
+
+            toast.info("Update Todo Success!");
             return;
         }
 

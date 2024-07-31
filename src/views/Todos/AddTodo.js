@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 class AddTodo extends React.Component {
     state = {
@@ -13,7 +14,7 @@ class AddTodo extends React.Component {
 
     handleAddTodo = () => {
         if (!this.state.title) {
-            alert('Missing Title');
+            toast.error("Missing Title Todo!");
             return;
         }
 
@@ -31,13 +32,16 @@ class AddTodo extends React.Component {
     render() {
         let { title } = this.state;
         return (
-            <div className="add-todo">
-                <input type="text"
-                    value={title}
-                    onChange={(event) => this.handleChangeTitle(event)}
-                />
-                <button type="button" onClick={(event) => this.handleAddTodo(event)}>Add</button>
-            </div>
+            <>
+                <p>Simple ToDo App With Reactjs (NTD)</p>
+                <div className="add-todo">
+                    <input type="text"
+                        value={title}
+                        onChange={(event) => this.handleChangeTitle(event)}
+                    />
+                    <button type="button" onClick={(event) => this.handleAddTodo(event)}>Add</button>
+                </div>
+            </>
         )
     }
 }

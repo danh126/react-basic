@@ -2,6 +2,7 @@ import React from "react";
 
 import ChildComponent from "./ChildComponent";
 import AddComponent from "./AddComponent";
+import { toast } from "react-toastify";
 
 class FormComponent extends React.Component {
     state = {
@@ -18,6 +19,8 @@ class FormComponent extends React.Component {
         this.setState({
             arrJobs: [...this.state.arrJobs, job]
         })
+
+        toast.info("Add Job Success!");
     }
 
     // arrow function delete job
@@ -27,6 +30,8 @@ class FormComponent extends React.Component {
         this.setState({
             arrJobs: currenJob
         })
+
+        toast.warning("Delete Job Success!");
     }
 
     //Hàm này là nơi thích hợp dùng để gọi api
