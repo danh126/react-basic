@@ -18,6 +18,7 @@ import Home from './Nav/home';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ListUsers from './Users/ListUsers';
 
 /**
  * có 2 kiểu components: class component / function component (function, arrow)
@@ -44,6 +45,9 @@ function App() {
             </Route>
             <Route path="/about">
               <FormComponent />
+            </Route>
+            <Route path="/users">
+              <ListUsers />
             </Route>
           </Switch>
         </header>

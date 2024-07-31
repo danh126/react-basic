@@ -1,0 +1,14 @@
+.list-user-container {
+    .list-user-content {
+        .child {
+            width: 400px;
+            border: 1px solid tomato;
+            margin: 0 auto;
+            height: 40px;
+
+            &:first-child {
+                margin-top: 15px;
+            }
+        }
+    }
+}
