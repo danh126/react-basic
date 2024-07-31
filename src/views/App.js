@@ -4,11 +4,11 @@ import './Todos/ListTodo.scss';
 import './Nav/nav.scss';
 
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useRouteMatch,
+  useParams
 } from "react-router-dom";
 
 import ListTodo from './Todos/ListTodo';
@@ -29,7 +29,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   // const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <header className="App-header">
           <Nav />
@@ -62,7 +62,7 @@ function App() {
         {/* Same as */}
         <ToastContainer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
