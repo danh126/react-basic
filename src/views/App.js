@@ -20,6 +20,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ListUsers from './Users/ListUsers';
 import DetailUser from './Users/DetailUser';
+import ListCategories from './Category/ListCategories';
 
 /**
  * có 2 kiểu components: class component / function component (function, arrow)
@@ -52,6 +53,9 @@ function App() {
             </Route>
             <Route path="/users/:id">
               <DetailUser />
+            </Route>
+            <Route path="/categories">
+              <ListCategories />
             </Route>
           </Switch>
         </header>

@@ -1,0 +1,19 @@
+.list-category-container {
+    .list-category-content {
+        margin-top: 10px;
+
+        .child {
+            border: 1px solid tomato;
+            width: 400px;
+            margin: 0 auto;
+            height: 40px;
+        }
+    }
+
+    button {
+        margin-left: 5px;
+        background-color: rgb(203, 120, 120);
+        color: white;
+        height: 30px;
+    }
+}
