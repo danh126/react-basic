@@ -1,7 +1,8 @@
 const initState = {
-    user: [
+    users: [
         { id: 1, name: 'Danh' },
         { id: 2, name: 'NTD' },
+        { id: 3, name: 'Nguyen Thanh Danh' },
     ]
 }
 

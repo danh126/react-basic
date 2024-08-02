@@ -3,6 +3,8 @@ import { withRouter } from "react-router";
 import Color from "../HOC/Color";
 import logo from '../../assets/imgs/NTD.jpg';
 
+import { connect } from "react-redux";
+
 class Home extends React.Component {
 
     // componentDidMount() {
@@ -12,7 +14,8 @@ class Home extends React.Component {
     // }
 
     render() {
-        console.log('>>> check props: ', this.props);
+        console.log('>>> check props dataRedux: ', this.props.dataRedux);
+
         return (
             <>
                 <div>Hello World With Reactjs (NTD)</div>
@@ -21,5 +24,12 @@ class Home extends React.Component {
         )
     }
 }
-export default withRouter(Home);
+
+const mapState = (state) => {
+    return {
+        dataRedux: state.users
+    }
+}
+
+export default connect(mapState)(withRouter(Home));
 // export default Color(Home);
