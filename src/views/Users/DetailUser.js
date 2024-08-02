@@ -2,7 +2,6 @@ import axios from "axios";
 import React from "react";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
-
 class DetailUser extends React.Component {
     state = {
         user: {}
